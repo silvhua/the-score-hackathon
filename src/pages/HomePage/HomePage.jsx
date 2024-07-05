@@ -26,7 +26,8 @@ const HomePage = () => {
       setFilteredEvents(filteredData);
       setSubtitle(`Events for ${formatDate(selectedDate)}`);
     } else {
-      setFilteredEvents(eventsData.slice(0,3));
+      const nextEvents = eventsData.filter(object => new Date(object.datetime) > new Date())
+      setFilteredEvents(nextEvents.slice(0,3));
       setSubtitle('Upcoming Events');
     }
   }, [selectedDate])
