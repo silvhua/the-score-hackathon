@@ -43,3 +43,8 @@ body {
     display: none;
   }
 }
+
+main {
+  position: relative;
+  top: $header-height
+}
