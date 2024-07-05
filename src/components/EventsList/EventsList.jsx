@@ -4,6 +4,9 @@ import Placeholder from '../../components/Placeholder/Placeholder';
 import { formatDate } from "../../utils/utils";
 import avatar from '../../assets/icons/Mohan-muruge.jpg';
 import downArrow from '../../assets/icons/arrow_drop_down-24px.svg'
+import basketBallIcon from '../../assets/icons/sports-basketball-svgrepo-com.svg';
+import footBallIcon from '../../assets/icons/sports-football-svgrepo-com.svg';
+import tennisIcon from '../../assets/icons/sports-tennis-svgrepo-com.svg';
 
 const EventsList = (props) => {
   const {
@@ -80,7 +83,7 @@ const EventsList = (props) => {
                 {event.name === "Baller Meetup" ||
                 event.name === "Hoop Heroes Hangout" ? (
                   <img
-                    src="./src/assets/icons/sports-basketball-svgrepo-com.svg"
+                    src={basketBallIcon}
                     alt="basketball"
                     className="sport-icon"
                   ></img>
@@ -92,8 +95,8 @@ const EventsList = (props) => {
                 {event.name === "Football Fiesta" ||
                 event.name === "First Down Fanfare" ? (
                   <img
-                    src="./src/assets/icons/sports-football-svgrepo-com.svg"
-                    alt="basketball"
+                    src={footBallIcon}
+                    alt="football"
                     className="sport-icon"
                   ></img>
                 ) : (
@@ -103,8 +106,8 @@ const EventsList = (props) => {
               <div className="icons">
                 {event.name === "Tennis Tournament Thrills" ? (
                   <img
-                    src="./src/assets/icons/sports-tennis-svgrepo-com.svg"
-                    alt="basketball"
+                    src={tennisIcon}
+                    alt="tennis ball"
                     className="sport-icon"
                   ></img>
                 ) : (
