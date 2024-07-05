@@ -1,12 +1,36 @@
 @use "../../styles/partials/variables" as *;
 
+.containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .event-card__container {
   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
+  justify-content: center;
+  align-items: center;
   height: 15vh;
   width: 100%;
   background-color: $score-blue;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   border-radius: 4px;
+  text-decoration: none;
+  position: relative;
+
+  &:hover {
+    border: 6px solid $score-orange;
+    border-radius: 4px;
+    box-shadow: 0 20px 26px 16px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.event-card {
+  display: flex;
+  color: $score-white;
+  font-weight: 500;
+  position: absolute;
+  font-size: 1.25rem;
+  top: 0.5rem;
+  left: 1rem;
 }
