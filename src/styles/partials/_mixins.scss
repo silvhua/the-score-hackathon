@@ -13,3 +13,21 @@
     @content;
   }
 }
+
+@mixin flex-mixin($element-width) {
+  display: flex;
+  position: relative;
+  width: $element-width;
+}
+@mixin flex-mixin--row ($element-width) {
+  @include flex-mixin($element-width);
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@mixin flex-mixin--column ($element-width) {
+  @include flex-mixin($element-width);
+  flex-direction: column;
+  justify-content: center;
+}
