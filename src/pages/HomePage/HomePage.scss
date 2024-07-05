@@ -8,19 +8,38 @@ $calendar-width: 20rem;
 $events-list-width: calc(100% - $calendar-width - $spacing--tablet);
 $background-color:  $score-gray-5;
 
+main {
+  background-color: $background-color; 
+  @include flex-mixin--column(100%);
+  align-items: center;
+}
+
 .home {
   @include flex-mixin--column(100%);
-  display: flex;
+  justify-content: flex-start;
   padding: 1rem;
   gap: $spacing--mobile;
-  background-color: $background-color; 
   min-height: 100vh;
+  align-items: center;
+  max-width: $tablet;
 
   @include tablet {
-    @include flex-mixin--row(100%);
-    flex-direction: row;
-    gap: $spacing--tablet;
-    padding: $spacing--tablet;
+    // padding: 1rem $spacing--tablet; 
+  }
+
+  &__title {
+    align-self: flex-start;
+    color: white;
+  }
+
+  &__body {
+    @include flex-mixin--column(100%);
+    max-width: $tablet;
+    gap: $spacing--mobile;
+    @include tablet {
+      @include flex-mixin--row(100%);
+      gap: $spacing--tablet;
+    }
   }
 }
 
