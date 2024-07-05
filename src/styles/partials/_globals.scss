@@ -41,12 +41,12 @@ html {
 body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   background-color: $score-gray-5;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
 }
 
 main {
   position: relative;
-  top: $header-height
+  top: $header-height;
 }

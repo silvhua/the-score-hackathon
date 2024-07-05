@@ -31,6 +31,7 @@ const ProfilePage = () => {
             {joinedEvents.map((joinedEvent, i) => {
               return (
                 <EventCard
+                  id={joinedEvent.id}
                   icons={icons}
                   key={i}
                   name={joinedEvent.name}
