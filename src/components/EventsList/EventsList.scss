@@ -1,1 +1,12 @@
 @use "../../styles/partials/variables" as *;
+
+.event-card__container {
+  display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  height: 15vh;
+  width: 100%;
+  background-color: $score-blue;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}

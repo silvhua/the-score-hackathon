@@ -1,5 +1,11 @@
+import EventsList from "../../components/EventsList/EventsList.jsx";
+
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <>
+      <EventsList />
+    </>
+  );
 };
 
 export default HomePage;

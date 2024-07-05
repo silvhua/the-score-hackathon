@@ -1,12 +1,24 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./EventsList.scss";
 import eventsData from "../../data/data.json";
 
-export const EventsList = () => {
-  const [selectedEvent, setSelectedEvent] = useState(null);
+const EventsList = () => {
+  //   console.log(eventsData.events.length);
 
-  const eventsDataParsed = JSON.parse(eventsData);
-  console.log(eventsDataParsed);
-  return <>{"eventsDataParsed"}</>;
+  return (
+    <main>
+      {eventsData.events.map((event) => {
+        return (
+          // console.log(event);
+          <section className="event-card__container" key={event.id}>
+            <Link to={`/event/${event.id}`}>
+              <section className="event-card"></section>
+            </Link>
+          </section>
+        );
+      })}
+    </main>
+  );
 };
+
+export default EventsList;
