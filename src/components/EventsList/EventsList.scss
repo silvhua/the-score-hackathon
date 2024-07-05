@@ -68,13 +68,6 @@
   }
 }
 
-// .text {
-//   display: flex;
-//   background-color: $score-blue;
-//   flex-direction: column;
-//   gap: 0.5rem;
-// }
-
 .location {
   background-color: $score-blue;
 }
@@ -89,4 +82,26 @@
 
 .cost {
   background-color: $score-blue;
+}
+
+.sport-icon {
+  background-color: $score-blue;
+  height: 2rem;
+  width: 2rem;
+}
+
+.card-banner {
+  background-color: $score-blue;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  //   gap: 7rem;
+  //   justify-content: space-between;
+}
+
+.icons {
+  background-color: $score-blue;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }

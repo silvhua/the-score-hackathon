@@ -23,9 +23,21 @@ const EventsList = () => {
             <Link to={`/event/${event.id}`} className="event-card__container">
               <section className="event-card">
                 {/* <div className="text"> */}
-                <div className="event__title">
-                  {event.name}
-                  {/* <div>{event.name === "Baller Meetup" || event.name === "Hoop Heroes Hangout" ? ${}}</div> */}
+                {/* <div className="event__title">
+                  {event.name} */}
+                <div className="card-banner">
+                  <div className="event__title">{event.name}</div>
+
+                  {/* {event.name === "Baller Meetup" ||
+                  event.name === "Hoop Heroes Hangout" ? (
+                    <img
+                      src="./src/assets/icons/sports-basketball-svgrepo-com.svg"
+                      alt="basketball"
+                      className="basketball"
+                    ></img>
+                  ) : (
+                    ""
+                  )} */}
                 </div>
                 <div className="event__details">
                   <div className="event__details--col-1">
@@ -47,6 +59,41 @@ const EventsList = () => {
                 {/* </div> */}
                 {/* <div className="icon"></div> */}
               </section>
+              <div className="icons">
+                {event.name === "Baller Meetup" ||
+                event.name === "Hoop Heroes Hangout" ? (
+                  <img
+                    src="./src/assets/icons/sports-basketball-svgrepo-com.svg"
+                    alt="basketball"
+                    className="sport-icon"
+                  ></img>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div className="icons">
+                {event.name === "Football Fiesta" ||
+                event.name === "First Down Fanfare" ? (
+                  <img
+                    src="./src/assets/icons/sports-football-svgrepo-com.svg"
+                    alt="basketball"
+                    className="sport-icon"
+                  ></img>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div className="icons">
+                {event.name === "Tennis Tournament Thrills" ? (
+                  <img
+                    src="./src/assets/icons/sports-tennis-svgrepo-com.svg"
+                    alt="basketball"
+                    className="sport-icon"
+                  ></img>
+                ) : (
+                  ""
+                )}
+              </div>
             </Link>
           </section>
         );
