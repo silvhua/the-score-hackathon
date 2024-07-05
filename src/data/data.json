@@ -1,0 +1,126 @@
+{
+  "id": 1,
+  "name": "Toronto",
+  "location": "Toronto",
+  "events": [
+    {
+      "id": 1,
+      "name": "Baller Meetup",
+      "datetime": "2024-07-06T17:00:00Z",
+      "location": "202 Dundas Street East",
+      "imgUrl": "https://unsplash.com/photos/a-group-of-people-playing-a-game-of-basketball-g1EzD7iMd7s",
+      "attendees": [
+        {
+          "id": 1,
+          "name": "Jane Doe"
+        },
+        {
+          "id": 2,
+          "name": "Smith Jones"
+        }
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "name": "Jane Doe",
+          "text": "Looking forward to this!",
+          "datetime": "2024-07-05T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Football Fiesta",
+      "datetime": "2024-07-16T22:00:00Z",
+      "location": "707 Richmond Street West",
+      "imgUrl": "https://unsplash.com/photos/a-young-man-kneeling-down-next-to-a-soccer-ball-hkug7N1Y0tY",
+      "attendees": [
+        {
+          "id": 3,
+          "name": "Sarah Davis"
+        },
+        {
+          "id": 4,
+          "name": "Daniel Thomas"
+        }
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "name": "Sarah Davis",
+          "text": "Looking forward to seeing everyone",
+          "datetime": "2024-07-04T16:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Tennis Tournament Thrills",
+      "datetime": "2024-07-21T20:00:00Z",
+      "location": "404 Bay Street",
+      "imgUrl": "https://unsplash.com/photos/a-person-holding-a-tennis-racket-on-a-tennis-court-RjCo6j0BkU8",
+      "attendees": [
+        {
+          "id": 5,
+          "name": "Michael Brown"
+        },
+        {
+          "id": 6,
+          "name": "David Wilson"
+        }
+      ],
+      "comments": [
+        {
+          "id": 1,
+          "name": "David Wilson",
+          "text": "Can’t wait for the tennis meetup! Ready to serve up some fun.",
+          "datetime": "2024-07-03T15:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Hoop Heroes Hangout",
+      "datetime": "2024-07-13T22:00:00Z",
+      "location": "123 King Street West",
+      "imgUrl": "https://unsplash.com/photos/hand-of-young-professional-basketball-player-holding-ball-while-going-to-have-training-on-playground-0E5D9V0FWR4",
+      "attendees": [
+        {
+          "id": 5,
+          "name": "Michael Brown"
+        },
+        {
+          "id": 1,
+          "name": "Jane Doe"
+        },
+        {
+          "id": 6,
+          "name": "David Wilson"
+        }
+      ],
+      "comments": []
+    },
+    {
+      "id": 5,
+      "name": "First Down Fanfare",
+      "datetime": "2024-07-06T22:00:00Z",
+      "location": "303 Spadina Avenue",
+      "imgUrl": "https://unsplash.com/photos/a-group-of-young-men-playing-a-game-of-soccer-mQqIdQXYJ7U",
+      "attendees": [
+        {
+          "id": 2,
+          "name": "Smith Jones"
+        },
+        {
+          "id": 3,
+          "name": "Sarah Davis"
+        },
+        {
+          "id": 4,
+          "name": "Daniel Thomas"
+        }
+      ],
+      "comments": []
+    }
+  ]
+}
