@@ -12,19 +12,21 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding-top: 5rem;
 }
 
 .profile-wrp {
   margin: 6rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   max-width: $tablet !important;
   width: 100%;
   padding: 1rem;
 }
-.events-upcoming,
-.communities-joined {
+
+.events-upcoming-wrp,
+.communities-joined-wrp {
   display: flex;
   flex-direction: column;
   gap: 1rem;

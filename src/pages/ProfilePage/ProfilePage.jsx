@@ -27,33 +27,36 @@ const ProfilePage = () => {
       <div className="profile-wrp">
         <div className="events-upcoming">
           <h3>Upcoming events</h3>
-          {joinedEvents.map((joinedEvent, i) => {
-            return (
-              <EventCard
-                icons={icons}
-                key={i}
-                name={joinedEvent.name}
-                datetime={joinedEvent.datetime}
-                location={joinedEvent.location}
-                cost={joinedEvent.cost}
-                attendees={joinedEvent.attendees.length}
-              />
-            );
-          })}
+          <div className="events-upcoming-wrp">
+            {joinedEvents.map((joinedEvent, i) => {
+              return (
+                <EventCard
+                  icons={icons}
+                  key={i}
+                  name={joinedEvent.name}
+                  datetime={joinedEvent.datetime}
+                  location={joinedEvent.location}
+                  cost={joinedEvent.cost}
+                  attendees={joinedEvent.attendees.length}
+                />
+              );
+            })}
+          </div>
         </div>
 
         <div className="communities-joined">
           <h3>You Joined Communities</h3>
-
-          {joinedCommunities.map((joinedCommunity, i) => {
-            return (
-              <CommunityCard
-                key={i}
-                name={joinedCommunity.name}
-                people={joinedCommunity.people}
-              />
-            );
-          })}
+          <div className="communities-joined-wrp">
+            {joinedCommunities.map((joinedCommunity, i) => {
+              return (
+                <CommunityCard
+                  key={i}
+                  name={joinedCommunity.name}
+                  people={joinedCommunity.people}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
