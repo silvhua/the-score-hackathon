@@ -2,15 +2,12 @@
 import "./CalendarComponent.scss";
 import Calendar from "react-calendar";
 import isSameDate from "../../utils/utils";
-// import data from '../../data/data.json';
 
 const CalendarComponent = (props) => {
   const {eventsData, handleDateClick, selectedDate, eventDates} = props;
   const eventClass = 'react-calendar__tile--event'
   const dateTileClass = 'react-calendar__tile'
   const todaysDate = new Date();
-  
-  // let eventDates = eventsData.map(event => new Date(event.datetime));
 
   function tileClassName({ date, view }) {
     let classNames = '';

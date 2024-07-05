@@ -12,7 +12,10 @@ $shadow-color: #616161;
 @mixin calendar-tile-hover {
   border: $calendar-tile-border-width solid $score-orange;
 }
-
+/* 
+Note that many of the class names were taken from the react-calendar package itself to overwrite
+its default styling. Use dev tools to see the class names of the calendar elements.
+*/
 .react-calendar {
   border: $calendar-tile-border-width solid $calendar-tile-base-color;
   font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -34,7 +37,6 @@ $shadow-color: #616161;
     &.react-calendar__tile--selected {
       // selected date tiles WITHOUT events on that date
       background: linear-gradient(to bottom, $score-gray-2 60%, $score-gray-3);
-      // box-shadow: inset 0px 0px 0px 0px #999, inset 0px -3px 3px -1px #999, inset 0px 3px 3px -1px #999, inset 0px -3px 3px -1px #999, inset 0px 3px 3px -1px #999, inset 3px 0px 3px -1px #999, inset -3px 0px 3px -1px #999;
       color: $score-gray-5;
       border-radius: 4px;
       border: $calendar-tile-border;
@@ -72,13 +74,6 @@ $shadow-color: #616161;
       text-decoration-thickness: 3px;
       text-decoration-color: $score-orange;
     }
-
-    // &--selected {
-    //   background: linear-gradient(to bottom, $score-blue, $score-black);
-    //   color: white;
-    //   border-radius: 4px;
-    //   border: $calendar-tile-border--event;
-    // }
   }
 
   &__month-view__weekdays {
