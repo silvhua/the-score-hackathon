@@ -1,4 +1,5 @@
 import "./App.scss";
+import "./styles/partials/_globals.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import EventPage from "./pages/EventPage/EventPage";

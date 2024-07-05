@@ -1,0 +1,46 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.icon-wrp {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+.profile-event-card {
+  background-color: $score-blue;
+  margin: 0;
+  border-radius: 4px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    height: fit-content;
+  }
+
+  &__name,
+  &__date {
+    font-size: 1rem;
+  }
+  &__details {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__time,
+  &__location,
+  &__cost,
+  &__attendees {
+    font-weight: 500;
+    font-size: 0.75rem;
+  }
+  &__icon {
+    width: 100px;
+  }
+}
+.icon-price {
+  opacity: 0;
+}
