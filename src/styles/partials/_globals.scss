@@ -28,6 +28,7 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  padding-bottom: $spacing--mobile;
 }
 
 /* Common styles */
@@ -41,4 +42,9 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+main {
+  position: relative;
+  top: $header-height
 }
