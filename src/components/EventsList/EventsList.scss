@@ -1,12 +1,107 @@
 @use "../../styles/partials/variables" as *;
 
+* {
+  background-color: $score-gray-5;
+}
+
+.containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .event-card__container {
   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
+  align-items: center;
   height: 15vh;
   width: 100%;
   background-color: $score-blue;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   border-radius: 4px;
+  text-decoration: none;
+  position: relative;
+
+  &:hover {
+    border: 6px solid $score-orange;
+    border-radius: 4px;
+    box-shadow: 0 20px 26px 16px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.event-card {
+  background-color: $score-blue;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: $score-white;
+  margin-left: 1rem;
+}
+
+.event {
+  &__title {
+    background-color: $score-blue;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  &__details {
+    display: flex;
+    flex-direction: row;
+    background-color: $score-blue;
+    gap: 2rem;
+
+    &--col-1 {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      background-color: $score-blue;
+      font-weight: 500;
+      font-size: 0.75rem;
+    }
+    &--col-2 {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      background-color: $score-blue;
+      font-weight: 500;
+      font-size: 0.75rem;
+    }
+  }
+}
+
+.location {
+  background-color: $score-blue;
+}
+
+.attendees {
+  background-color: $score-blue;
+}
+
+.time {
+  background-color: $score-blue;
+}
+
+.cost {
+  background-color: $score-blue;
+}
+
+.sport-icon {
+  background-color: $score-blue;
+  height: 2rem;
+  width: 2rem;
+}
+
+.card-banner {
+  background-color: $score-blue;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  //   gap: 7rem;
+  //   justify-content: space-between;
+}
+
+.icons {
+  background-color: $score-blue;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }
