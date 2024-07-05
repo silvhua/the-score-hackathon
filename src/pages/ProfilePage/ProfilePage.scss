@@ -1,6 +1,9 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+.width {
+  max-width: $tablet;
+}
 .profile {
   background-color: $score-black;
   height: 100vh;
@@ -10,17 +13,13 @@
   justify-content: space-between;
   align-items: center;
 }
-.header-width {
-  width: 100%;
-  max-width: $tablet;
-  background-color: $score-gray-5;
-}
+
 .profile-wrp {
   margin: 6rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: $tablet;
+  max-width: $tablet !important;
   width: 100%;
   padding: 1rem;
 }

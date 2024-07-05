@@ -2,6 +2,7 @@
 
 // const SportIcon = ({ eventName, icons }) => {
 //   const iconSrc = icons[eventName];
+//   console.log(icons);
 
 //   if (!iconSrc) return null;
 

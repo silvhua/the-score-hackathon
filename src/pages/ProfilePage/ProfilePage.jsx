@@ -4,10 +4,6 @@ import Header from "../../components/Header/Header";
 import data from "../../data/data.json";
 import "./ProfilePage.scss";
 
-import basketballIcon from "../../assets/icons/sports-basketball-svgrepo-com.svg";
-import footballIcon from "../../assets/icons/sports-football-svgrepo-com.svg";
-import tennisIcon from "../../assets/icons/sports-tennis-svgrepo-com.svg";
-
 const ProfilePage = () => {
   const events = data.events;
   const joinedEvents = [events[1], events[3]];
@@ -17,15 +13,17 @@ const ProfilePage = () => {
   ];
 
   const icons = {
-    "Baller Meetup": basketballIcon,
-    "Hoop Heroes Hangout": basketballIcon,
-    "Football Fiesta": footballIcon,
-    "First Down Fanfare": footballIcon,
-    "Tennis Tournament Thrills": tennisIcon,
+    "Baller Meetup": "../../assets/icons/sports-basketball-svgrepo-com.svg",
+    "Hoop Heroes Hangout":
+      "../../assets/icons/sports-basketball-svgrepo-com.svg",
+    "Football Fiesta": "../../assets/icons/sports-football-svgrepo-com.svg",
+    "First Down Fanfare": "../../assets/icons/sports-football-svgrepo-com.svg",
+    "Tennis Tournament Thrills":
+      "../../assets/icons/sports-tennis-svgrepo-com.svg",
   };
   return (
     <section className="profile">
-      <Header pageTitle={"Profile"} className="header-width" />
+      <Header pageTitle={"Profile"} className="width" />
       <div className="profile-wrp">
         <div className="events-upcoming">
           <h3>Upcoming events</h3>

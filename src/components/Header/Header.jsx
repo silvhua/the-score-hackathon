@@ -5,7 +5,7 @@ import backArrow from "../../assets/icons/back.svg";
 import "./Header.scss";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const Header = ({ pageTitle }) => {
+const Header = ({ pageTitle, className = "" }) => {
   const navigate = useNavigate();
   const currentPath = useLocation().pathname;
 
@@ -16,7 +16,7 @@ const Header = ({ pageTitle }) => {
   };
 
   return (
-    <header className="header">
+    <header className={`header ${className}`}>
       <Link to={"/"} className="header__logo">
         <img src={logo} alt={"the Score Logo"} />
       </Link>
