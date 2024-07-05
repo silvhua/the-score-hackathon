@@ -1,9 +1,9 @@
 import "./EventCard.scss";
 import { formatDate } from "../../utils/utils";
-import dateIcon from "../../assets/icon/date-white.svg";
-import groupIcon from "../../assets/icon/group-white.svg";
-import locationIcon from "../../assets/icon/location-white.svg";
-import timeIcon from "../../assets/icon/time-white.svg";
+import dateIcon from "../../assets/icons/date-white.svg";
+import groupIcon from "../../assets/icons/group-white.svg";
+import locationIcon from "../../assets/icons/location-white.svg";
+import timeIcon from "../../assets/icons/time-white.svg";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   hour: "2-digit",

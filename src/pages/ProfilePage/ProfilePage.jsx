@@ -45,7 +45,7 @@ const ProfilePage = () => {
         </div>
 
         <div className="communities-joined">
-          <h3>You Joined Communities</h3>
+          <h3>Your Joined Communities</h3>
           <div className="communities-joined-wrp">
             {joinedCommunities.map((joinedCommunity, i) => {
               return (
