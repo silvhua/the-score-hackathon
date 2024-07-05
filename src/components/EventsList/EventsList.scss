@@ -101,3 +101,17 @@
       height: 100%;
   }
 }
+
+.expand-toggle {
+  @extend .event-card;
+  @extend .event-card__container;
+
+  &:hover {
+    border: none;
+
+  }
+}
+
+.hidden {
+  display: none
+}

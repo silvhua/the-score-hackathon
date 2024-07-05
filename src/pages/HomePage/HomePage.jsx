@@ -49,6 +49,9 @@ const HomePage = () => {
               eventsData={filteredEvents} 
               selectedDate={selectedDate}
               subtitle={subtitle}
+              setFilteredEvents={setFilteredEvents}
+              allEventsData={eventsData}
+              setSelectedDate={setSelectedDate}
             />
             
           </div>

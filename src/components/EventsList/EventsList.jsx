@@ -3,16 +3,30 @@ import "./EventsList.scss";
 import Placeholder from '../../components/Placeholder/Placeholder';
 import { formatDate } from "../../utils/utils";
 import avatar from '../../assets/icons/Mohan-muruge.jpg';
+import { useState } from "react";
 
-const EventsList = ({eventsData, selectedDate, subtitle}) => {
+const EventsList = (props) => {
+  const {
+    eventsData, selectedDate, subtitle, 
+    setFilteredEvents, allEventsData, setSelectedDate
+  } = props;
 
   const formatter = new Intl.DateTimeFormat("en-US", {
     hour: "2-digit",
   });
 
+  const [toggleExpander, setToggleExpander] = useState(true);
+
+  const handleToggleclick = () => {
+    setFilteredEvents(allEventsData);
+    setSelectedDate(null);
+    setToggleExpander(!toggleExpander);
+  }
+
   if (!eventsData) {
     return <Placeholder />
   }
+  // console.log
 
   return (
     <article className='events'>
@@ -45,7 +59,7 @@ const EventsList = ({eventsData, selectedDate, subtitle}) => {
                     <div className="avatars">
                       {event.attendees.map((attendee) => {
                         return (
-                          <div className="avatar-div">
+                          <div className="avatar-div" key={attendee.id}>
                             <img 
                               src={avatar} className="avatar-div__img" 
                               alt={attendee.name} title={attendee.name}
@@ -101,6 +115,12 @@ const EventsList = ({eventsData, selectedDate, subtitle}) => {
           </section>
         );
       })}
+    <div 
+      className={toggleExpander ? "expand-toggle" : "expand-toggle hidden"} 
+      onClick={handleToggleclick}
+      >
+      <p>More...</p>
+    </div>
     </article>
   );
 };
