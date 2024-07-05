@@ -27,7 +27,7 @@ const CalendarComponent = () => {
     setValue(nextValue);
   }
   return (
-    <><h1>Calendar</h1>
+    <>
       <Calendar className='calendar'
         onChange={onChange}
         tileClassName={tileClassName}

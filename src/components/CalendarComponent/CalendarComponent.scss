@@ -11,10 +11,14 @@ $calendar-tile-event-color: $score-blue;
 
 .react-calendar {
   border: $calendar-tile-border-width solid $calendar-tile-base-color;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: 'Comic Sans MS';
+
   &__tile {
       background-color: $calendar-tile-base-color;
       padding: 1em 0;
       border: $calendar-tile-border-width solid $calendar-tile-base-color;
+      border-radius: 4px;
 
     &:hover {
       @include calendar-tile-hover();
@@ -40,14 +44,51 @@ $calendar-tile-event-color: $score-blue;
     & abbr { // style day of the week heading
       text-decoration: none;
       color: $score-black;
-
     }
   }
 
-  &__navigation__arrow {
-    background-color: $score-gray-2;
+  &__month-view__days {
   }
+
+  &__navigation {
+    width: 100%;
+  }
+
+  &__navigation__arrow, &__navigation__label {
+    background-color: $score-gray-2;
+    height: 2rem;
+    border: 1px solid $score-gray-3;
+    border: none;
+    border-radius: 4px;
+
+
+    & span {
+      font-weight: bold;
+    }
+
+  }
+
+  &__navigation__arrow {
+    width: 10%;
+
+    &:hover {
+      background-color: $score-gray-3;
+    }
+  }
+
+  &__navigation__label {
+    width: 60%;
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
 }
 
+span, button, abbr {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  
+}
 
 
