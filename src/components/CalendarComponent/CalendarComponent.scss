@@ -1,10 +1,13 @@
 @use '../../styles/partials/variables' as *;
-
+@use '../../styles/partials/mixins' as *;
 
 $calendar-tile-border-width: 3px;
 $calendar-tile-base-color: $clore-gray-1;
 $calendar-tile-event-color: $score-blue;
-$calendar-tile-today-color: $score-gray-2;
+$calendar-tile-today-color: $clore-gray-1;
+$calendar-tile-border: $calendar-tile-border-width solid $calendar-tile-base-color;
+$calendar-tile-border--event: $calendar-tile-border-width solid $calendar-tile-event-color;
+$shadow-color: #616161;
 
 @mixin calendar-tile-hover {
   border: $calendar-tile-border-width solid $score-orange;
@@ -13,21 +16,34 @@ $calendar-tile-today-color: $score-gray-2;
 .react-calendar {
   border: $calendar-tile-border-width solid $calendar-tile-base-color;
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  font-family: 'Comic Sans MS';
+  height: auto;
+  border-radius: 4px;
+  background-color: $calendar-tile-base-color;
+
 
   &__tile {
       background-color: $calendar-tile-base-color;
       padding: 1em 0;
-      border: $calendar-tile-border-width solid $calendar-tile-base-color;
-      border-radius: 4px;
+      border: $calendar-tile-border;
 
     &:hover {
       @include calendar-tile-hover();
+      border-radius: 4px;
+    }
+
+    &.react-calendar__tile--selected {
+      // selected date tiles WITHOUT events on that date
+      background: linear-gradient(to bottom, $score-gray-2 60%, $score-gray-3);
+      // box-shadow: inset 0px 0px 0px 0px #999, inset 0px -3px 3px -1px #999, inset 0px 3px 3px -1px #999, inset 0px -3px 3px -1px #999, inset 0px 3px 3px -1px #999, inset 3px 0px 3px -1px #999, inset -3px 0px 3px -1px #999;
+      color: $score-gray-5;
+      border-radius: 4px;
+      border: $calendar-tile-border;
     }
 
     &--event {
       background-color: $score-blue;
       border: $calendar-tile-border-width solid $calendar-tile-event-color;
+      border-radius: 4px;
       &:hover {
         @include calendar-tile-hover();
       }
@@ -35,6 +51,14 @@ $calendar-tile-today-color: $score-gray-2;
       & abbr { // font color within date tile
         color: $clore-gray-1;
         font-weight: bold;
+      }
+
+      &.react-calendar__tile--selected { 
+        // selected date tiles WITH events on that date
+        background: linear-gradient(to bottom, $score-blue, $score-black);
+        color: white;
+        border-radius: 4px;
+        border: $calendar-tile-border--event;
       }
     }
 
@@ -48,10 +72,18 @@ $calendar-tile-today-color: $score-gray-2;
       text-decoration-thickness: 3px;
       text-decoration-color: $score-orange;
     }
+
+    // &--selected {
+    //   background: linear-gradient(to bottom, $score-blue, $score-black);
+    //   color: white;
+    //   border-radius: 4px;
+    //   border: $calendar-tile-border--event;
+    // }
   }
 
   &__month-view__weekdays {
     text-align: center;
+    background-color: $calendar-tile-base-color;
 
     & abbr { // style day of the week heading
       text-decoration: none;
@@ -71,8 +103,6 @@ $calendar-tile-today-color: $score-gray-2;
     height: 2rem;
     border: 1px solid $score-gray-3;
     border: none;
-    border-radius: 4px;
-
 
     & span {
       font-weight: bold;

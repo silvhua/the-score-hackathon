@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "./HomePage.scss";
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
 import data from '../../data/data.json';
 import isSameDate from "../../utils/utils.js";
@@ -27,14 +27,14 @@ const HomePage = () => {
     }
   }, [selectedDate])
   return (
-    <main>
+    <main className='home'>
       <CalendarComponent 
         eventsData={eventsData} 
         handleDateClick={handleDateClick}
+        selectedDate={selectedDate}
       />
       <EventsList 
         eventsData={filteredEvents} 
-        // filteredEvents={filteredEvents}
       />
     </main>
   

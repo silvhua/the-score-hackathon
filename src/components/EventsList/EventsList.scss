@@ -1,8 +1,6 @@
 @use "../../styles/partials/variables" as *;
+@use '../../styles/partials/mixins' as *;
 
-article {
-  background-color: $score-gray-5; //
-}
 
 .containers {
   display: flex;

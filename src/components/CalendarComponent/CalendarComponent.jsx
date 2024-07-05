@@ -4,7 +4,8 @@ import Calendar from "react-calendar";
 import isSameDate from "../../utils/utils";
 // import data from '../../data/data.json';
 
-const CalendarComponent = ({eventsData, handleDateClick}) => {
+const CalendarComponent = (props) => {
+  const {eventsData, handleDateClick, selectedDate} = props;
   const eventClass = 'react-calendar__tile--event'
   const dateTileClass = 'react-calendar__tile'
   const todaysDate = new Date();
@@ -24,6 +25,10 @@ const CalendarComponent = ({eventsData, handleDateClick}) => {
     }
     if (isSameDate(todaysDate, date)) {
       classNames += ' react-calendar__tile--today';
+    }
+
+    if (selectedDate && isSameDate(selectedDate, date)) {
+      classNames += ' react-calendar__tile--selected';
     }
     return classNames;
   }

@@ -21,7 +21,7 @@ const EventsList = ({eventsData}) => {
   }
 
   return (
-    <article>
+    <article className='events'>
       {eventsData.map((event) => {
         return (
           // console.log(event);
