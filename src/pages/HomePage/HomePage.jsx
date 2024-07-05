@@ -1,5 +1,12 @@
+import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
+
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <main>
+      <CalendarComponent />
+    </main>
+  
+  );
 };
 
 export default HomePage;
