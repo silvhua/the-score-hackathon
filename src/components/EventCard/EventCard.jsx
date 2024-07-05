@@ -8,21 +8,23 @@ const formatter = new Intl.DateTimeFormat("en-US", {
 
 const EventCard = ({ name, datetime, location, cost, attendees, icons }) => {
   return (
-    <div className="event-card">
-      <div className="event-card__content">
-        <h3 className="event-card__name">{name}</h3>
-        <span className="event-card__date">
+    <div className="profile-event-card">
+      <div className="profile-event-card__content">
+        <h3 className="profile-event-card__name">{name}</h3>
+        <span className="profile-event-card__date">
           {formatDate(new Date(datetime))}
         </span>
-        <div className="event-card__details">
-          <span className="event-card__time">
+        <div className="profile-event-card__details">
+          <span className="profile-event-card__time">
             {formatter.format(Date.parse(datetime))}
           </span>
-          <span className="event-card__location">{location}</span>
+          <span className="profile-event-card__location">{location}</span>
         </div>
-        <div className="event-card__details">
-          <span className="event-card__cost">{cost}</span>
-          <span className="event-card__attendees">{attendees} attendees</span>
+        <div className="profile-event-card__details">
+          <span className="profile-event-card__cost">{cost}</span>
+          <span className="profile-event-card__attendees">
+            {attendees} attendees
+          </span>
         </div>
       </div>
 

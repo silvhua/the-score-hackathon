@@ -3,13 +3,20 @@ import logo from "../../assets/logo/logo-white.png";
 import profileIcon from "../../assets/icons/profile.svg";
 import backArrow from "../../assets/icons/back.svg";
 import "./Header.scss";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const Header = ({ pageTitle, className = "" }) => {
+const Header = ({ pageTitle }) => {
   const navigate = useNavigate();
+  const currentPath = useLocation().pathname;
+
+  const handleBackButton = () => {
+    if (currentPath !== "/") {
+      navigate(-1);
+    }
+  };
 
   return (
-    <header className={`header ${className}`}>
+    <header className="header">
       <Link to={"/"} className="header__logo">
         <img src={logo} alt={"the Score Logo"} />
       </Link>
@@ -17,7 +24,7 @@ const Header = ({ pageTitle, className = "" }) => {
         <img
           src={backArrow}
           alt="Back Button"
-          onClick={() => navigate(-1)}
+          onClick={handleBackButton}
           className="header__button-back"
         />
         <h1 className="header__title-text">{pageTitle}</h1>
