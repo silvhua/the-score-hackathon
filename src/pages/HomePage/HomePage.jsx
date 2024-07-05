@@ -1,26 +1,40 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
-import eventData from '../../data/data.json';
+import data from '../../data/data.json';
+import isSameDate from "../../utils/utils.js";
 
 import EventsList from "../../components/EventsList/EventsList.jsx";
 
 const HomePage = () => {
-
+  let eventData = data.events;
   const [selectedDate, setSelectedDate] = useState(null);
+  const [filteredEvents, setFilteredEvents] = useState(eventData)
 
   const handleDateClick = (value) => {
     setSelectedDate(value);
   }
 
-  // console.log(selectedDate)
+  useEffect(() => {
+    if (selectedDate) {
+      const filteredData = eventData.filter((object) => {
+        const eventDate = new Date(object.datetime);
+        return isSameDate(eventDate, selectedDate);
+      })
+      setFilteredEvents(filteredData)
+
+    }
+  }, [selectedDate])
+
   return (
     <main>
       <CalendarComponent 
         eventData={eventData} 
         handleDateClick={handleDateClick}
         />
-      <EventsList />
+      <EventsList 
+        eventData={filteredEvents} 
+      />
     </main>
   
   );

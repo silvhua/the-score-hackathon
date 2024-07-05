@@ -8,8 +8,8 @@ const CalendarComponent = ({eventData, handleDateClick}) => {
   const eventClass = 'react-calendar__tile--event'
   const dateTileClass = 'react-calendar__tile'
   const todaysDate = new Date();
-  // const [value, setValue] = useState(new Date());
-  let eventDates = eventData.events.map(event => new Date(event.datetime));
+  
+  let eventDates = eventData.map(event => new Date(event.datetime));
 
   function tileClassName({ date, view }) {
     let classNames = '';
@@ -26,16 +26,11 @@ const CalendarComponent = ({eventData, handleDateClick}) => {
       classNames += ' react-calendar__tile--today';
     }
     return classNames;
-
   }
 
-  // function onChange(nextValue) {
-  //   setValue(nextValue);
-  // }
   return (
     <>
       <Calendar className='calendar'
-        // onChange={onChange}
         onChange={handleDateClick}
         tileClassName={tileClassName}
       />
