@@ -1,6 +1,11 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+.icon-wrp {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
 .profile-event-card {
   background-color: $score-blue;
   margin: 0;
@@ -35,4 +40,7 @@
   &__icon {
     width: 100px;
   }
+}
+.icon-price {
+  opacity: 0;
 }
