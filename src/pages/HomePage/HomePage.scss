@@ -2,8 +2,6 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/globals' as *;
 
-$spacing--mobile: 1rem;
-$spacing--tablet: 3rem;
 $calendar-width: 20rem;
 $events-list-width: calc(100% - $calendar-width - $spacing--tablet);
 $background-color:  $score-gray-5;
@@ -30,6 +28,11 @@ main {
   &__title {
     align-self: flex-start;
     color: white;
+  }
+
+  &__subtitle {
+    @extend .home__title;
+    font-style: italic;
   }
 
   &__body {
