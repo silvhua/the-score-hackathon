@@ -3,16 +3,30 @@ import "./EventsList.scss";
 import Placeholder from '../../components/Placeholder/Placeholder';
 import { formatDate } from "../../utils/utils";
 import avatar from '../../assets/icons/Mohan-muruge.jpg';
+import downArrow from '../../assets/icons/arrow_drop_down-24px.svg'
 
-const EventsList = ({eventsData, selectedDate, subtitle}) => {
+const EventsList = (props) => {
+  const {
+    eventsData, selectedDate, subtitle, 
+    setFilteredEvents, allEventsData, setSelectedDate,
+    toggleExpander, setToggleExpander
+  } = props;
 
   const formatter = new Intl.DateTimeFormat("en-US", {
     hour: "2-digit",
   });
 
+
+  const handleToggleclick = () => {
+    setFilteredEvents(allEventsData);
+    setSelectedDate(null);
+    setToggleExpander(!toggleExpander);
+  }
+
   if (!eventsData) {
     return <Placeholder />
   }
+  console.log(toggleExpander)
 
   return (
     <article className='events'>
@@ -45,7 +59,7 @@ const EventsList = ({eventsData, selectedDate, subtitle}) => {
                     <div className="avatars">
                       {event.attendees.map((attendee) => {
                         return (
-                          <div className="avatar-div">
+                          <div className="avatar-div" key={attendee.id}>
                             <img 
                               src={avatar} className="avatar-div__img" 
                               alt={attendee.name} title={attendee.name}
@@ -101,6 +115,13 @@ const EventsList = ({eventsData, selectedDate, subtitle}) => {
           </section>
         );
       })}
+    <div 
+      className={toggleExpander || selectedDate ? "expand-toggle" : "expand-toggle hidden"} 
+      onClick={handleToggleclick}
+      >
+      <p className="expand-toggle__text">Show all...</p>
+      <img src={downArrow} alt="down arrow" className="expand-toggle__arrow" />
+    </div>
     </article>
   );
 };
