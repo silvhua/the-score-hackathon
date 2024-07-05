@@ -4,6 +4,7 @@
 $calendar-tile-border-width: 3px;
 $calendar-tile-base-color: $clore-gray-1;
 $calendar-tile-event-color: $score-blue;
+$calendar-tile-today-color: $score-gray-2;
 
 @mixin calendar-tile-hover {
   border: $calendar-tile-border-width solid $score-orange;
@@ -35,6 +36,17 @@ $calendar-tile-event-color: $score-blue;
         color: $clore-gray-1;
         font-weight: bold;
       }
+    }
+
+    &--today {
+      background-color: $calendar-tile-today-color;
+      border-radius: 4px;
+      border: $calendar-tile-border-width solid $calendar-tile-today-color;
+      font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+      text-decoration-thickness: 3px;
+      text-decoration-color: $score-orange;
     }
   }
 

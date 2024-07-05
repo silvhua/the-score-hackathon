@@ -22,6 +22,9 @@ const CalendarComponent = ({eventData, handleDateClick}) => {
         classNames = dateTileClass;
       }
     }
+    if (isSameDate(todaysDate, date)) {
+      classNames += ' react-calendar__tile--today';
+    }
     return classNames;
 
   }
