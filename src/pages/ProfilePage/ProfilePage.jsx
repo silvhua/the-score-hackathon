@@ -23,7 +23,7 @@ const ProfilePage = () => {
   };
   return (
     <section className="profile">
-      <Header pageTitle={"Profile"} className="width" />
+      <Header pageTitle={"Profile"} />
       <div className="profile-wrp">
         <div className="events-upcoming">
           <h3>Upcoming events</h3>

@@ -4,7 +4,10 @@ import Calendar from "react-calendar";
 import isSameDate from "../../utils/utils";
 
 const CalendarComponent = (props) => {
-  const {eventsData, handleDateClick, selectedDate, eventDates} = props;
+  const {
+    eventsData, handleDateClick, selectedDate, eventDates,
+    toggleExpander, setToggleExpander
+  } = props;
   const eventClass = 'react-calendar__tile--event'
   const dateTileClass = 'react-calendar__tile'
   const todaysDate = new Date();
