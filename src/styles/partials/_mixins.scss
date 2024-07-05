@@ -1,0 +1,41 @@
+@use "./variables" as *;
+
+//Tablet breakpoint from 768px onwards:
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+//Desktop breakpoint from 1280px onwards:
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin flex-mixin($element-width) {
+  display: flex;
+  position: relative;
+  width: $element-width;
+}
+@mixin flex-mixin--row ($element-width) {
+  @include flex-mixin($element-width);
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@mixin flex-mixin--column ($element-width) {
+  @include flex-mixin($element-width);
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin zero-spacing {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    line-height: 100%;
+}

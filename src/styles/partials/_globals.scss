@@ -1,0 +1,52 @@
+@use "./variables" as *;
+@use "./typography" as *;
+@use "./mixins" as *;
+/* Default browser styling reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+img,
+video {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  padding-bottom: $spacing--mobile;
+}
+
+/* Common styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  background-color: $score-gray-5;
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+}
+
+main {
+  position: relative;
+  top: $header-height;
+}

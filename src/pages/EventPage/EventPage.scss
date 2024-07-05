@@ -1,0 +1,123 @@
+@use "../../styles/partials/globals" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.event {
+  color: $score-white;
+  padding: 1rem;
+  padding-bottom: 1.5rem;
+  margin-top: 6rem;
+  @include tablet {
+    padding: 1.5rem;
+    padding-bottom: 2.25rem;
+  }
+  @include desktop {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__image-container {
+    border-radius: 1.25rem;
+  }
+  &__image {
+    border-radius: 1.25rem;
+    width: 100%;
+    height: 20vh;
+  }
+
+  &__name {
+    padding-block: 1rem;
+  }
+
+  &__text {
+    padding: 0;
+  }
+
+  &__box {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: center;
+
+    @include desktop {
+      justify-content: flex-start;
+    }
+  }
+
+  &__button {
+    padding: 1rem;
+    color: $score-white;
+    background-color: $score-blue;
+    border-radius: 1rem;
+    border: none;
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+      border: 3px solid $score-orange;
+      box-shadow: 0 20px 26px 16px rgba(0, 0, 0, 0.3);
+    }
+    @include tablet {
+      max-width: 7.5rem;
+    }
+  }
+}
+
+.discussion {
+  color: $score-white;
+  padding: 1rem;
+  border-top: 1px $score-gray-2 solid;
+  @include tablet {
+    padding: 1.5rem;
+  }
+  @include desktop {
+    max-width: 80rem;
+    margin: auto;
+  }
+
+  &__title {
+    padding-bottom: 1rem;
+    @include tablet {
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px $score-gray-4 solid;
+  }
+
+  &__top-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    padding-top: 1rem;
+  }
+
+  &__name {
+    padding: 0;
+  }
+
+  &__date {
+    font-size: 0.8rem;
+    color: $score-gray-2;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__text {
+    padding-block: 1rem;
+  }
+}
