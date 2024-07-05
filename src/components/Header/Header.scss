@@ -3,41 +3,45 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
-.header{
-    @include desktop{
-        max-width: 80rem;
-        margin: auto;
-    }
+.header {
+  @include desktop {
+    max-width: 80rem;
+    margin: auto;
+  }
 
-    &__logo{
+  &__logo {
     display: flex;
     justify-content: center;
     padding: 0 1rem 0 1rem;
     img {
-        width: 6rem; 
-        height: auto;
+      width: 6rem;
+      height: auto;
     }
-    }
+  }
 
-    &__title{
-        display: flex;
-        padding: 1rem;
-        padding-top: 0;
-        justify-content: space-between;
-        align-items: center;
-        color: $score-white;
-        @include tablet{
-            padding: 1.5rem;
-            padding-top: 0;
-        }
+  &__title {
+    display: flex;
+    padding: 1rem;
+    padding-top: 0;
+    justify-content: space-between;
+    align-items: center;
+    color: $score-white;
+    @include tablet {
+      padding: 1.5rem;
+      padding-top: 0;
     }
+  }
 
-    h1{
-        font-family: "Inter";
-        font-size: 1.5rem;
-    }
+  h1 {
+    font-family: "Inter";
+    font-size: 1.5rem;
+  }
 
-    img{
-        object-fit: contain;
-    }
+  img {
+    object-fit: contain;
+  }
+
+  &__button-back {
+    cursor: pointer;
+  }
 }

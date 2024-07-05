@@ -1,0 +1,13 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.community-card {
+  border-radius: 4px;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $score-gray-4;
+  padding: 1rem;
+  font-size: 1rem;
+}

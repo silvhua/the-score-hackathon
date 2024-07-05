@@ -1,33 +1,52 @@
+import CommunityCard from "../../components/CommunityCard/CommunityCard";
+import EventCard from "../../components/EventCard/EventCard";
 import Header from "../../components/Header/Header";
+import data from "../../data/data.json";
 import "./ProfilePage.scss";
 
 const ProfilePage = () => {
+  const events = data.events;
+  const joinedEvents = [events[1], events[3]];
+  const joinedCommunities = [
+    { name: "Ice Warriors", people: 5 },
+    { name: "Soccer Stars", people: 9 },
+  ];
+
   return (
-    <div>
-      <Header pageTitle={"Profile"} />
-
-      <section className="profile">
-        <div className="heading">Header</div>
-
-        <div className="events">
-          <div className="events-upcoming">
-            <h3>Upcoming events</h3>
-            <div>Upcoming event 1</div>
-            <div>Upcoming event 1</div>
-          </div>
-
-          <div className="events-joined">
-            <h3>You Joined Communities</h3>
-            <div className="community-card">
-              <h4 className="community-card__title">Community Name</h4>
-              <span className="community-card__people">5 people</span>
-            </div>
-
-            <div></div>
-          </div>
+    <section className="profile">
+      <Header pageTitle={"Profile"} className="header-width" />
+      <div className="profile-wrp">
+        <div className="events-upcoming">
+          <h3>Upcoming events</h3>
+          {joinedEvents.map((joinedEvent, i) => {
+            return (
+              <EventCard
+                key={i}
+                name={joinedEvent.name}
+                datetime={joinedEvent.datetime}
+                location={joinedEvent.location}
+                cost={joinedEvent.cost}
+                attendees={joinedEvent.attendees.length}
+              />
+            );
+          })}
         </div>
-      </section>
-    </div>
+
+        <div className="communities-joined">
+          <h3>You Joined Communities</h3>
+
+          {joinedCommunities.map((joinedCommunity, i) => {
+            return (
+              <CommunityCard
+                key={i}
+                name={joinedCommunity.name}
+                people={joinedCommunity.people}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 };
 
