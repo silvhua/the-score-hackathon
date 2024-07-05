@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import "./EventsList.scss";
-import eventsData from "../../data/data.json";
+import Placeholder from '../../components/Placeholder/Placeholder';
+
+// import eventsData from "../../data/data.json";
 
 // this component will take in filtered data
-const EventsList = () => {
+const EventsList = ({eventsData}) => {
   //   const formatter = new Intl.DateTimeFormat("en-US", {
   //     day: "2-digit",
   //     month: "2-digit",
@@ -14,9 +16,13 @@ const EventsList = () => {
     hour: "2-digit",
   });
 
+  if (!eventsData) {
+    return <Placeholder />
+  }
+
   return (
-    <main>
-      {eventsData.events.map((event) => {
+    <article>
+      {eventsData.map((event) => {
         return (
           // console.log(event);
           <section className="containers" key={event.id}>
@@ -98,7 +104,7 @@ const EventsList = () => {
           </section>
         );
       })}
-    </main>
+    </article>
   );
 };
 

@@ -4,12 +4,13 @@ import CalendarComponent from "../../components/CalendarComponent/CalendarCompon
 import data from '../../data/data.json';
 import isSameDate from "../../utils/utils.js";
 
+
 import EventsList from "../../components/EventsList/EventsList.jsx";
 
 const HomePage = () => {
-  let eventData = data.events;
+  let eventsData = data.events;
   const [selectedDate, setSelectedDate] = useState(null);
-  const [filteredEvents, setFilteredEvents] = useState(eventData)
+  const [filteredEvents, setFilteredEvents] = useState(eventsData)
 
   const handleDateClick = (value) => {
     setSelectedDate(value);
@@ -17,7 +18,7 @@ const HomePage = () => {
 
   useEffect(() => {
     if (selectedDate) {
-      const filteredData = eventData.filter((object) => {
+      const filteredData = eventsData.filter((object) => {
         const eventDate = new Date(object.datetime);
         return isSameDate(eventDate, selectedDate);
       })
@@ -25,15 +26,15 @@ const HomePage = () => {
 
     }
   }, [selectedDate])
-
   return (
     <main>
       <CalendarComponent 
-        eventData={eventData} 
+        eventsData={eventsData} 
         handleDateClick={handleDateClick}
-        />
+      />
       <EventsList 
-        eventData={filteredEvents} 
+        eventsData={filteredEvents} 
+        // filteredEvents={filteredEvents}
       />
     </main>
   

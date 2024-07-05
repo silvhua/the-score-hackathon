@@ -1,7 +1,7 @@
 @use "../../styles/partials/variables" as *;
 
-* {
-  background-color: $score-gray-5;
+article {
+  background-color: $score-gray-5; //
 }
 
 .containers {
