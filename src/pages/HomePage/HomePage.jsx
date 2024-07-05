@@ -1,12 +1,5 @@
-// import './HomePage.scss';
-import CalendarComponent from "../../components/Calendar/CalendarComponent";
-
-const HomePage = async () => {
-  return (
-    <>
-      <CalendarComponent />
-    </>
-  );
+const HomePage = () => {
+  return <div>HomePage</div>;
 };
 
 export default HomePage;
