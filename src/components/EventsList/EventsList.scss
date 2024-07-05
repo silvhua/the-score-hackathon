@@ -105,10 +105,16 @@
 .expand-toggle {
   @extend .event-card;
   @extend .event-card__container;
+  gap: 0;
+  height: 100%;
+  cursor: pointer;
 
   &:hover {
     border: none;
+  }
 
+  &__text {
+    padding: 0;
   }
 }
 

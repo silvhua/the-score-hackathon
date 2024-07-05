@@ -12,11 +12,16 @@ const HomePage = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [filteredEvents, setFilteredEvents] = useState(null);
   const [subtitle, setSubtitle] = useState();
+  const [toggleExpander, setToggleExpander] = useState(true);
   let eventDates = eventsData.map(event => new Date(event.datetime));
 
   const handleDateClick = (value) => {
     setSelectedDate(value);
+    if (selectedDate && !toggleExpander) {
+    setToggleExpander(true);
+    }
   }
+  
 
   useEffect(() => {
     if (selectedDate && eventDates.find(eventDate => isSameDate(selectedDate, eventDate))) {
@@ -26,6 +31,8 @@ const HomePage = () => {
       })
       setFilteredEvents(filteredData);
       setSubtitle(`Events for ${formatDate(selectedDate)}`);
+    } else if (!toggleExpander) {
+      setFilteredEvents(eventsData);
     } else {
       const nextEvents = eventsData.filter(object => new Date(object.datetime) > new Date())
       setFilteredEvents(nextEvents.slice(0,3));
@@ -44,6 +51,8 @@ const HomePage = () => {
               handleDateClick={handleDateClick}
               selectedDate={selectedDate}
               eventDates={eventDates}
+              toggleExpander={toggleExpander}
+              setToggleExpander={setToggleExpander}
             />
             <EventsList 
               eventsData={filteredEvents} 
@@ -52,6 +61,8 @@ const HomePage = () => {
               setFilteredEvents={setFilteredEvents}
               allEventsData={eventsData}
               setSelectedDate={setSelectedDate}
+              toggleExpander={toggleExpander}
+              setToggleExpander={setToggleExpander}
             />
             
           </div>
