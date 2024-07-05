@@ -46,4 +46,8 @@
     img{
         object-fit: contain;
     }
+
+    &__button-back {
+        cursor: pointer;
+    }
 }
