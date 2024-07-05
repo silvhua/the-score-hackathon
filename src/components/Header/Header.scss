@@ -13,6 +13,8 @@
     @include desktop{
         max-width: 80rem;
         margin: auto;
+        left:50%;
+        transform: translateX(-50%);
     }
 
     &__logo{
