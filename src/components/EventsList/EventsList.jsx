@@ -5,7 +5,7 @@ import Placeholder from '../../components/Placeholder/Placeholder';
 // import eventsData from "../../data/data.json";
 
 // this component will take in filtered data
-const EventsList = ({eventsData}) => {
+const EventsList = ({eventsData, selectedDate, subtitle}) => {
   //   const formatter = new Intl.DateTimeFormat("en-US", {
   //     day: "2-digit",
   //     month: "2-digit",
@@ -22,6 +22,8 @@ const EventsList = ({eventsData}) => {
 
   return (
     <article className='events'>
+      
+      <h2 className='home__title'>{subtitle}</h2>
       {eventsData.map((event) => {
         return (
           // console.log(event);
