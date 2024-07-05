@@ -1,9 +1,53 @@
-.date {
-  &__today {
-    background-color: pink;
+@use '../../styles/partials/variables' as *;
+
+
+$calendar-tile-border-width: 3px;
+$calendar-tile-base-color: $clore-gray-1;
+$calendar-tile-event-color: $score-blue;
+
+@mixin calendar-tile-hover {
+  border: $calendar-tile-border-width solid $score-orange;
+}
+
+.react-calendar {
+  border: $calendar-tile-border-width solid $calendar-tile-base-color;
+  &__tile {
+      background-color: $calendar-tile-base-color;
+      padding: 1em 0;
+      border: $calendar-tile-border-width solid $calendar-tile-base-color;
+
+    &:hover {
+      @include calendar-tile-hover();
+    }
+
+    &--event {
+      background-color: $score-blue;
+      border: $calendar-tile-border-width solid $calendar-tile-event-color;
+      &:hover {
+        @include calendar-tile-hover();
+      }
+
+      & abbr { // font color within date tile
+        color: $clore-gray-1;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__month-view__weekdays {
+    text-align: center;
+
+    & abbr { // style day of the week heading
+      text-decoration: none;
+      color: $score-black;
+
+    }
+  }
+
+  &__navigation__arrow {
+    background-color: $score-gray-2;
   }
 }
 
-.calendar {
-  color: blue;
-}
+
+

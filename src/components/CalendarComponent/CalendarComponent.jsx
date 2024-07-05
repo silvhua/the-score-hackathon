@@ -6,17 +6,19 @@ import data from '../../data/data.json';
 
 const CalendarComponent = () => {
   const datesToAddClassTo = [new Date()];
-  const className = 'date__today'
+  const eventClass = 'react-calendar__tile--event'
+  const dateTileClass = 'react-calendar__tile'
   const [value, setValue] = useState(new Date());
   let eventDates = data.events.map(event => new Date(event.datetime));
-  console.log(eventDates);
 
   function tileClassName({ date, view }) {
     // Add class to tiles in month view only
     if (view === 'month') {
       // Check if a date React-Calendar wants to check is on the list of dates to add class to
       if (eventDates.find(dDate => isSameDate(dDate, date))) {
-        return className;
+        return eventClass;
+      } else {
+        return dateTileClass;
       }
     }
   }
@@ -25,8 +27,8 @@ const CalendarComponent = () => {
     setValue(nextValue);
   }
   return (
-    <><h1 className='calendar'>Calendar</h1>
-      <Calendar
+    <><h1>Calendar</h1>
+      <Calendar className='calendar'
         onChange={onChange}
         tileClassName={tileClassName}
       />
