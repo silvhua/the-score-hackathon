@@ -10,7 +10,7 @@
       "location": "202 Dundas Street East",
       "cost": "FREE",
       "category": "Basketball",
-      "imgUrl": "https://unsplash.com/photos/a-group-of-people-playing-a-game-of-basketball-g1EzD7iMd7s",
+      "imgUrl": "basketball1",
       "attendees": [
         {
           "id": 1,
@@ -27,6 +27,12 @@
           "name": "Jane Doe",
           "text": "Looking forward to this!",
           "datetime": "2024-07-05T14:00:00Z"
+        },
+        {
+          "id": 2,
+          "name": "Smith Jones",
+          "text": "Can't wait!",
+          "datetime": "2024-07-04T16:00:00Z"
         }
       ]
     },
@@ -37,7 +43,7 @@
       "location": "707 Richmond Street West",
       "cost": "$20",
       "category": "Football",
-      "imgUrl": "https://unsplash.com/photos/a-young-man-kneeling-down-next-to-a-soccer-ball-hkug7N1Y0tY",
+      "imgUrl": "football1",
       "attendees": [
         {
           "id": 3,
@@ -64,7 +70,7 @@
       "location": "404 Bay Street",
       "cost": "FREE",
       "category": "Tennis",
-      "imgUrl": "https://unsplash.com/photos/a-person-holding-a-tennis-racket-on-a-tennis-court-RjCo6j0BkU8",
+      "imgUrl": "tennis1",
       "attendees": [
         {
           "id": 5,
@@ -91,7 +97,7 @@
       "location": "123 King Street West",
       "cost": "$10",
       "category": "Basketball",
-      "imgUrl": "https://unsplash.com/photos/hand-of-young-professional-basketball-player-holding-ball-while-going-to-have-training-on-playground-0E5D9V0FWR4",
+      "imgUrl": "basketball2",
       "attendees": [
         {
           "id": 5,
@@ -115,7 +121,7 @@
       "location": "303 Spadina Avenue",
       "cost": "FREE",
       "category": "Football",
-      "imgUrl": "https://unsplash.com/photos/a-group-of-young-men-playing-a-game-of-soccer-mQqIdQXYJ7U",
+      "imgUrl": "football2",
       "attendees": [
         {
           "id": 2,
