@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import './App.css'
+// import { useState } from 'react'
+import "./App.css";
+import CalendarComponent from "./components/CalendarComponent/CalendarComponent";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <>
-      The Score
+      <CalendarComponent />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
