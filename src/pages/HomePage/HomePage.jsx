@@ -3,6 +3,7 @@ import "./HomePage.scss";
 import CalendarComponent from "../../components/CalendarComponent/CalendarComponent";
 import data from '../../data/data.json';
 import isSameDate, {formatDate} from "../../utils/utils.js";
+import Header from "../../components/Header/Header.jsx"
 
 import EventsList from "../../components/EventsList/EventsList.jsx";
 
@@ -33,6 +34,7 @@ const HomePage = () => {
   }, [selectedDate])
   return (
     <main>
+      <Header pageTitle={"Toronto Community"}/>
       <div  className='home'>
         <h1 className='home__title'>Welcome to the Score's {data.location} Community</h1>
         <div className='home__body'>
