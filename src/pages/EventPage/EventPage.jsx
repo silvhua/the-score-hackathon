@@ -88,7 +88,7 @@ const EventPage = () => {
         </div>
         <div className="event__content">
           <h3 className="event__name">{event?.name}</h3>
-          <div className="event__box event__date">
+          <div className="event__box event__datetime">
             <img className="event__icon" src={dateIcon} alt={"Date Icon"} />
             <p className="event__text">{getDate(event?.datetime)}</p>
           </div>
