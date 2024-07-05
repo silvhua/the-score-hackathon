@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./EventsList.scss";
 import Placeholder from '../../components/Placeholder/Placeholder';
 import { formatDate } from "../../utils/utils";
-import avatar from '../../assets/icon/Mohan-muruge.jpg';
+import avatar from '../../assets/icons/Mohan-muruge.jpg';
 
 const EventsList = ({eventsData, selectedDate, subtitle}) => {
 
@@ -42,8 +42,21 @@ const EventsList = ({eventsData, selectedDate, subtitle}) => {
                   </div>
                   <div className="event__details--col-2">
                     <div className="location">{event.location}</div>
+                    <div className="avatars">
+                      {event.attendees.map((attendee) => {
+                        return (
+                          <div className="avatar-div">
+                            <img 
+                              src={avatar} className="avatar-div__img" 
+                              alt={attendee.name} title={attendee.name}
+                            />
+                          </div>
+                          )
+                        }
+                      )
+                    }
+                    </div>
                     <div className="attendees">
-                      {" "}
                       {event.attendees.length} attendees
                     </div>
                   </div>
