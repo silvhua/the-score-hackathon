@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./EventsList.scss";
 import Placeholder from '../../components/Placeholder/Placeholder';
+import { formatDate } from "../../utils/utils";
 
 // import eventsData from "../../data/data.json";
 
@@ -34,7 +35,13 @@ const EventsList = ({eventsData, selectedDate, subtitle}) => {
                 {/* <div className="event__title">
                   {event.name} */}
                 <div className="card-banner">
-                  <div className="event__title">{event.name}</div>
+                  <div className="event__title">
+                    <h3>{event.name}</h3>
+                    {
+                      subtitle !== 'Upcoming Events'  ? '': <p>{formatDate(new Date(event.datetime))}</p>
+                    }
+                    
+                  </div>
 
                   {/* {event.name === "Baller Meetup" ||
                   event.name === "Hoop Heroes Hangout" ? (
