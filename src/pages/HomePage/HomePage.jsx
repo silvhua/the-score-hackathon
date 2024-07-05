@@ -1,7 +1,5 @@
-import "./HomePage.scss";
-
 const HomePage = () => {
-  return <div className="home">HomePage</div>;
+  return <div>HomePage</div>;
 };
 
 export default HomePage;
