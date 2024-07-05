@@ -9,7 +9,7 @@ const Header = ({ pageTitle, className = "" }) => {
   const navigate = useNavigate();
 
   return (
-    <div className={`header ${className}`}>
+    <header className={`header ${className}`}>
       <Link to={"/"} className="header__logo">
         <img src={logo} alt={"the Score Logo"} />
       </Link>
@@ -25,7 +25,7 @@ const Header = ({ pageTitle, className = "" }) => {
           <img src={profileIcon} alt={"Profile Icon"} />
         </Link>
       </div>
-    </div>
+    </header>
   );
 };
 

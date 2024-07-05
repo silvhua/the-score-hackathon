@@ -4,6 +4,12 @@
 @use "../../styles/partials/typography" as *;
 
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  background-color: $score-gray-5;
+  height: $header-height;
+  width: 100%;
   @include desktop {
     max-width: 80rem;
     margin: auto;

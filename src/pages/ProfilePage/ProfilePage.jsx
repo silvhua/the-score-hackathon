@@ -4,6 +4,10 @@ import Header from "../../components/Header/Header";
 import data from "../../data/data.json";
 import "./ProfilePage.scss";
 
+import basketballIcon from "../../assets/icons/sports-basketball-svgrepo-com.svg";
+import footballIcon from "../../assets/icons/sports-football-svgrepo-com.svg";
+import tennisIcon from "../../assets/icons/sports-tennis-svgrepo-com.svg";
+
 const ProfilePage = () => {
   const events = data.events;
   const joinedEvents = [events[1], events[3]];
@@ -12,6 +16,13 @@ const ProfilePage = () => {
     { name: "Soccer Stars", people: 9 },
   ];
 
+  const icons = {
+    "Baller Meetup": basketballIcon,
+    "Hoop Heroes Hangout": basketballIcon,
+    "Football Fiesta": footballIcon,
+    "First Down Fanfare": footballIcon,
+    "Tennis Tournament Thrills": tennisIcon,
+  };
   return (
     <section className="profile">
       <Header pageTitle={"Profile"} className="header-width" />
@@ -21,6 +32,7 @@ const ProfilePage = () => {
           {joinedEvents.map((joinedEvent, i) => {
             return (
               <EventCard
+                icons={icons}
                 key={i}
                 name={joinedEvent.name}
                 datetime={joinedEvent.datetime}

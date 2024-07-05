@@ -38,27 +38,29 @@ const HomePage = () => {
     }
   }, [selectedDate]);
   return (
-    <main>
+    <>
       <Header pageTitle={"Toronto Community"} />
-      <div className="home">
-        <h1 className="home__title">
-          Welcome to the Score's {data.location} Community
-        </h1>
-        <div className="home__body">
-          <CalendarComponent
-            eventsData={eventsData}
-            handleDateClick={handleDateClick}
-            selectedDate={selectedDate}
-            eventDates={eventDates}
-          />
-          <EventsList
-            eventsData={filteredEvents}
-            selectedDate={selectedDate}
-            subtitle={subtitle}
-          />
+      <main>
+        <div className="home">
+          <h1 className="home__title">
+            Welcome to the Score's {data.location} Community
+          </h1>
+          <div className="home__body">
+            <CalendarComponent
+              eventsData={eventsData}
+              handleDateClick={handleDateClick}
+              selectedDate={selectedDate}
+              eventDates={eventDates}
+            />
+            <EventsList
+              eventsData={filteredEvents}
+              selectedDate={selectedDate}
+              subtitle={subtitle}
+            />
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 };
 

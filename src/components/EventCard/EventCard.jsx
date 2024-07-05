@@ -1,12 +1,12 @@
 import "./EventCard.scss";
 import { formatDate } from "../../utils/utils";
-import SportIcon from "./SportIcon";
+// import SportIcon from "../SportIcon/SportIcon";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   hour: "2-digit",
 });
 
-const EventCard = ({ name, datetime, location, cost, attendees }) => {
+const EventCard = ({ name, datetime, location, cost, attendees, icons }) => {
   return (
     <div className="event-card">
       <div className="event-card__content">
@@ -26,7 +26,7 @@ const EventCard = ({ name, datetime, location, cost, attendees }) => {
         </div>
       </div>
 
-      <SportIcon eventName={name} />
+      {/* <SportIcon eventName={name} icons={icons} /> */}
     </div>
   );
 };

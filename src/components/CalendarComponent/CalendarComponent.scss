@@ -19,9 +19,9 @@ its default styling. Use dev tools to see the class names of the calendar elemen
 .react-calendar {
   border: $calendar-tile-border-width solid $calendar-tile-base-color;
   font-family: "Inter", Arial, Helvetica, sans-serif;
+  background-color: $calendar-tile-base-color;
   height: auto;
   border-radius: 4px;
-  background-color: $calendar-tile-base-color;
 
 
   &__tile {
@@ -76,7 +76,7 @@ its default styling. Use dev tools to see the class names of the calendar elemen
     }
   }
 
-  &__month-view__weekdays {
+  &__month-view__weekdays, &__month-view {
     text-align: center;
     background-color: $calendar-tile-base-color;
 
