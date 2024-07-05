@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./CalendarComponent.scss";
 import Calendar from "react-calendar";
-import isSameDate from "../../utils";
+import isSameDate from "../../utils/utils";
+import data from '../../data/data.json';
 
 const CalendarComponent = () => {
   const datesToAddClassTo = [new Date()];
@@ -17,6 +18,7 @@ const CalendarComponent = () => {
       }
     }
   }
+  console.log(data);
 
   function onChange(nextValue) {
     console.log('next value', nextValue.setHours(0, 0,0,0));
