@@ -13,6 +13,8 @@
   @include desktop {
     max-width: 80rem;
     margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &__logo {
@@ -36,6 +38,9 @@
       padding: 1.5rem;
       padding-top: 0;
     }
+  }
+  &__title-text {
+    padding-bottom: 0;
   }
 
   h1 {
