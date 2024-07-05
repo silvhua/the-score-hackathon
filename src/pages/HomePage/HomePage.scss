@@ -1,0 +1,60 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/globals' as *;
+
+$spacing--mobile: 1rem;
+$spacing--tablet: 3rem;
+$calendar-width: 20rem;
+$events-list-width: calc(100% - $calendar-width - $spacing--tablet);
+$background-color:  $score-gray-5;
+
+main {
+  background-color: $background-color; 
+  @include flex-mixin--column(100%);
+  align-items: center;
+}
+
+.home {
+  @include flex-mixin--column(100%);
+  justify-content: flex-start;
+  padding: 1rem;
+  gap: $spacing--mobile;
+  min-height: 100vh;
+  align-items: center;
+  max-width: $tablet;
+
+  @include tablet {
+    // padding: 1rem $spacing--tablet; 
+  }
+
+  &__title {
+    align-self: flex-start;
+    color: white;
+  }
+
+  &__body {
+    @include flex-mixin--column(100%);
+    max-width: $tablet;
+    gap: $spacing--mobile;
+    @include tablet {
+      @include flex-mixin--row(100%);
+      gap: $spacing--tablet;
+    }
+  }
+}
+
+.calendar {
+  background-color: $background-color; 
+  width: 100%;
+  height: auto;
+
+  @include tablet {
+    width: $calendar-width;
+  }
+}
+
+.events {
+  @include tablet {
+    width: $events-list-width;
+  }
+}

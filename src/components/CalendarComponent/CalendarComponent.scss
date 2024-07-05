@@ -1,0 +1,131 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+$calendar-tile-border-width: 3px;
+$calendar-tile-base-color: $clore-gray-1;
+$calendar-tile-event-color: $score-blue;
+$calendar-tile-today-color: $clore-gray-1;
+$calendar-tile-border: $calendar-tile-border-width solid $calendar-tile-base-color;
+$calendar-tile-border--event: $calendar-tile-border-width solid $calendar-tile-event-color;
+$shadow-color: #616161;
+
+@mixin calendar-tile-hover {
+  border: $calendar-tile-border-width solid $score-orange;
+}
+/* 
+Note that many of the class names were taken from the react-calendar package itself to overwrite
+its default styling. Use dev tools to see the class names of the calendar elements.
+*/
+.react-calendar {
+  border: $calendar-tile-border-width solid $calendar-tile-base-color;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  height: auto;
+  border-radius: 4px;
+  background-color: $calendar-tile-base-color;
+
+
+  &__tile {
+      background-color: $calendar-tile-base-color;
+      padding: 1em 0;
+      border: $calendar-tile-border;
+
+    &:hover {
+      @include calendar-tile-hover();
+      border-radius: 4px;
+    }
+
+    &.react-calendar__tile--selected {
+      // selected date tiles WITHOUT events on that date
+      background: linear-gradient(to bottom, $score-gray-2 60%, $score-gray-3);
+      color: $score-gray-5;
+      border-radius: 4px;
+      border: $calendar-tile-border;
+    }
+
+    &--event {
+      background-color: $score-blue;
+      border: $calendar-tile-border-width solid $calendar-tile-event-color;
+      border-radius: 4px;
+      &:hover {
+        @include calendar-tile-hover();
+      }
+
+      & abbr { // font color within date tile
+        color: $clore-gray-1;
+        font-weight: bold;
+      }
+
+      &.react-calendar__tile--selected { 
+        // selected date tiles WITH events on that date
+        background: linear-gradient(to bottom, $score-blue, $score-black);
+        color: white;
+        border-radius: 4px;
+        border: $calendar-tile-border--event;
+      }
+    }
+
+    &--today {
+      background-color: $calendar-tile-today-color;
+      border-radius: 4px;
+      border: $calendar-tile-border-width solid $calendar-tile-today-color;
+      font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+      text-decoration-thickness: 3px;
+      text-decoration-color: $score-orange;
+    }
+  }
+
+  &__month-view__weekdays {
+    text-align: center;
+    background-color: $calendar-tile-base-color;
+
+    & abbr { // style day of the week heading
+      text-decoration: none;
+      color: $score-black;
+    }
+  }
+
+  &__month-view__days {
+  }
+
+  &__navigation {
+    width: 100%;
+  }
+
+  &__navigation__arrow, &__navigation__label {
+    background-color: $score-gray-2;
+    height: 2rem;
+    border: 1px solid $score-gray-3;
+    border: none;
+
+    & span {
+      font-weight: bold;
+    }
+
+  }
+
+  &__navigation__arrow {
+    width: 10%;
+
+    &:hover {
+      background-color: $score-gray-3;
+    }
+  }
+
+  &__navigation__label {
+    width: 60%;
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+}
+
+span, button, abbr {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  
+}
+
+
