@@ -1,0 +1,15 @@
+@use "./variables" as *;
+
+//Tablet breakpoint from 768px onwards:
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+//Desktop breakpoint from 1280px onwards:
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}

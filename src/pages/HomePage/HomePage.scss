@@ -1,0 +1,7 @@
+@use "../../styles/partials/variables" as *;
+.home {
+  color: rgba(249, 249, 249, 0.65);
+  // color: #f9f9f9;
+  font-size: 6rem;
+  background-color: $score-black;
+}
