@@ -12,9 +12,9 @@
     &__logo{
     display: flex;
     justify-content: center;
-    padding: 1rem 1rem 0 1rem;
+    padding: 0 1rem 0 1rem;
     img {
-        width: 5rem; 
+        width: 6rem; 
         height: auto;
     }
     }
@@ -22,10 +22,13 @@
     &__title{
         display: flex;
         padding: 1rem;
+        padding-top: 0;
         justify-content: space-between;
         align-items: center;
+        color: $score-white;
         @include tablet{
-            padding: 1.5rem
+            padding: 1.5rem;
+            padding-top: 0;
         }
     }
 
