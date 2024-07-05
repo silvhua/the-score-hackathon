@@ -1,4 +1,6 @@
 @use "./variables" as *;
+@use "./typography" as *;
+@use "./mixins" as *;
 /* Default browser styling reset */
 *,
 *::before,
