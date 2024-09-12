@@ -4,6 +4,10 @@
 
 theScore Connect is a community events platform that draws on the social element of sporting events and sports viewership. It engages sports fans through opportunities for social engagement and the love of sports. 
 
+
+https://github.com/user-attachments/assets/9cb45cf9-32cc-4162-a098-671f5485f6ca
+
+
 ## Overview
 
 This project was completed during a 24-hour industry hackathon organized by BrainStation with industry partner, theScore. All participants were students of BrainStation’s Software Engineering program.
