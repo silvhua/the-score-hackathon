@@ -33,9 +33,9 @@ visitors/community members looking to grow their network!
 ### Features
 
 1. Events page
-  - A calendar shows the community’s events by date
-  - The user can view all of the community’s events or filter the events by a given date
-  - The number of registrants is shown for each event
+	- A calendar shows the community’s events by date
+	- The user can view all of the community’s events or filter the events by a given date
+	- The number of registrants is shown for each event
 2. Event details page
 	- Shows event details
 	- The user can register for the event
